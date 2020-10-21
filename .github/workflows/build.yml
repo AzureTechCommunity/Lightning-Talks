@@ -1,6 +1,8 @@
 name: 'Produce Presentation Content'
 on:
   push:
+    paths:
+      - 'talks/**'
     branches:
       - main
 jobs:
