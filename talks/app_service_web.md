@@ -133,7 +133,7 @@ This is also a great way to lock your application to a specific older framework
 
 :::
 
-## That's cool, how about the new App Service Static Web Apps❓
+## That's cool, how about the new Azure Static Web Apps Apps❓
 
 ::: notes
 
@@ -141,7 +141,7 @@ Pivot from Web Apps (useful for server-side applications) to Static Web Apps (us
 
 :::
 
-### App Service Static Web Apps
+### Azure Static Web Apps Apps
 
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
@@ -218,7 +218,7 @@ Action specifies the location of the build artifacts, application root, and API
 
 :::
 
-## Demo: Deploying an App Service Static Web App from code on GitHub
+## Demo: Deploying an Azure Static Web Apps App from code on GitHub
 
 ::: notes
 
