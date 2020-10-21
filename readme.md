@@ -8,7 +8,7 @@ Each lightning talk is designed to take ~15 minutes to present and includes 1-2 
 
 | Talk | Markdown Source | PowerPoint Presentation | Train the Trainer Video |
 | :--- | ---: | ---: | ---: |
-| Host your web apps with Azure App Service  | [app_service_web.md][talk-app_service_web-source] | [app_service_web.pptx][release-latest] | [YouTube][talk-app_service_web-video] |
+| Host your web apps with Azure App Service  | [app_service_web.md][talk-app_service_web-source] | [app_service_web.pptx][release-latest] | [YouTube][talk-app_service_web-video]/[Alt][talk-app_service_web-video-alt] |
 
 ## Contributing
 
@@ -17,9 +17,10 @@ You can submit change requests, ideas and bugs using the [Issues][issues] tab he
 > **🙋 Need an example?** Use one of the existing presentations to see an example of the style and structure used to build our presentations in Markdown. The structure is based on the online [Pandoc slide show Markdown documentation][pandoc-guidance].
 
 [issues]: ../../issues
-[license]: license
+[license]: LICENSE
 [pull_requests]: ../../pulls
 [pandoc-guidance]: https://pandoc.org/MANUAL.html#slide-shows
 [release-latest]: ../../releases/latest
 [talk-app_service_web-source]: lightning/app_service_web.md
 [talk-app_service_web-video]: https://youtube.com/microsoftdevradio
+[talk-app_service_web-video-alt]: https://about:blank
