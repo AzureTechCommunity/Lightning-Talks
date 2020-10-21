@@ -1,0 +1,15 @@
+/*
+!.gitignore
+!license
+!readme.md
+!.github/
+!.assets/
+.assets/*
+!.assets/*.pptx
+!talks/
+talks/*
+!talks/*.md
+!talks/media/
+talks/media/*
+!talks/media/*.png
+!talks/media/*.jpg

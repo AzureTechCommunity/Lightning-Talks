@@ -1,0 +1,39 @@
+name: 'Produce Presentation Content'
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-pptx:
+    name: 'Build PowerPoint Presentation'
+    runs-on: ubuntu-latest
+    container:
+      image: seesharprun/pandoc-build
+    steps:
+      - name: 'Checkout Code'
+        uses: actions/checkout@v2
+      - name: 'Run Pandoc Builds'
+        run: ls | grep '.md' | xargs basename -s '.md' | xargs -I % sh -c "pandoc %.md --standalone --slide-level=3 --reference-doc=../.assets/template.pptx --variable=monofont:'Consolas' --output %-v${{ github.run_number }}.pptx"
+        working-directory: ./talks
+      - name: 'Upload Presentation Artifacts'
+        uses: actions/upload-artifact@v2
+        with:
+          name: presentations
+          path: ./talks/*.pptx
+  release-content:
+    name: 'Create GitHub Release'
+    runs-on: ubuntu-latest
+    needs: [ build-pptx ]
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+    steps:      
+      - name: 'Download Presentation Artifacts'
+        uses: actions/download-artifact@v2
+        with:
+          name: presentations
+      - name: 'Create GitHub Release'
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ./**/*.pptx         
+          tag_name: v${{ github.run_number }}
+          name: Release V${{ github.run_number }}
