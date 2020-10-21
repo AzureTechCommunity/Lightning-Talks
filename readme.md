@@ -14,7 +14,7 @@ Each lightning talk is designed to take ~15 minutes to present and includes 1-2 
 
 You can submit change requests, ideas and bugs using the [Issues][issues] tab here in the repository. You can also contribute new presentations or significant changes to existing presentations using the [Pull Request][pull_requests] tab.
 
-> **🙋 Need an example?** Use one of the existing presentations to see an example of the style and structure used to build our presentations in Markdown. The structure is based on the [Pandoc slide show Markdown documentation][pandoc-guidance].
+> **🙋 Need an example?** Use one of the existing presentations to see an example of the style and structure used to build our presentations in Markdown. The structure is based on the online [Pandoc slide show Markdown documentation][pandoc-guidance].
 
 [issues]: ../../issues
 [license]: license
