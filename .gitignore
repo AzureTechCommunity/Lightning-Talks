@@ -5,6 +5,7 @@
 !.github/
 !.assets/
 .assets/*
+!.assets/*.json
 !.assets/*.pptx
 !.assets/*.theme
 .assets/~$*.pptx

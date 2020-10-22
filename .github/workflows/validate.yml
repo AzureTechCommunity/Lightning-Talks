@@ -13,6 +13,7 @@ jobs:
       - name: 'Lint Markdown'
         uses: nosborn/github-action-markdown-cli@v1.1.1
         with:
+          config_file: '.assets/lint.config.json'
           files: '**/*.md'
   build-pptx:
     name: 'Build PowerPoint Presentation'
