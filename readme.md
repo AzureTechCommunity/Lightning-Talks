@@ -1,4 +1,4 @@
-## Community talks
+# Community talks
 
 This repository is home to a collection of Azure presentations that you are free to use in any community event. The presentations are licensed under the [MIT License][license].
 
