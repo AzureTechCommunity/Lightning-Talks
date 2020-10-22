@@ -1,6 +1,6 @@
 ---
 title: Host your web apps with Azure App Service
-author: Speaker Name
+author: Presenter Name
 ---
 
 ## What is App Service❓ What are Web Apps❓
@@ -54,6 +54,8 @@ Code is ran in a fully-managed production environment with automatic OS and fram
 :::
 ::: {.column width="50%"}
 
+Deploy code to Web Apps
+
 - Deploy code directly from a _deployment source_
   - GitHub
   - Azure Repos
@@ -83,6 +85,8 @@ It's trivial to configure automated deployment processes and deploy to slots oth
 
 :::
 ::: {.column width="50%"}
+
+Use Docker containers with Web Apps
 
 - Host applications using a _custom container_ from
   - Docker Hub
@@ -146,7 +150,9 @@ Pivot from Web Apps (useful for server-side applications) to Static Web Apps (us
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-- _Build_ ([github.com/microsoft/oryx][]) and _host_ static web applications
+_Build_  and _host_ static web applications
+
+- Uses Oryx (([github.com/microsoft/oryx][])) build engine
 - Built-in support for _authentication_ and _authorization_
 - _Azure Functions_ ➡️ APIs
 - _GitHub Actions_ ➡️ CI/CD
@@ -193,19 +199,36 @@ Application is built and deployed to Azure on commits and pull requests to watch
 
 :::
 
+### Github Action
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+
+_Static Web Apps Deploy_ GitHub Action
+
+- Used by Azure Static Web Apps to automate deployment from GitHub
+- You can use directly in any of your own workflows
+- Open-source on GitHub ([github.com/azure/static-web-apps-deploy][])
+
+:::
+::: {.column width="50%"}
+
+![ ][images-github]
+
+:::
+::::::::::::::
+
 ### Example Github Actions workflow YAML
 
-> GitHub Action ([github.com/azure/static-web-apps-deploy][])
-
-```yml
-- uses: Azure/static-web-apps-deploy@v0.0.1-preview
+```yaml
+- uses: "Azure/static-web-apps-deploy@v0.0.1-preview"
   with:
-    azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
-    repo_token: ${{ secrets.GITHUB_TOKEN }}
+    azure_static_web_apps_api_token: "${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}"
+    repo_token: "${{ secrets.GITHUB_TOKEN }}"
     action: "upload"
     app_location: "/"
     api_location: "api"
-    app_artifact_location: "public"
+    app_artifact_location: "out"
 ```
 
 ::: notes
@@ -218,7 +241,7 @@ Action specifies the location of the build artifacts, application root, and API
 
 :::
 
-## Demo: Deploying an Azure Static Web Apps App from code on GitHub
+## Demo: Deploying an Azure Static Web App from code on GitHub
 
 ::: notes
 
@@ -243,13 +266,16 @@ Action specifies the location of the build artifacts, application root, and API
 
 ### Review
 
-- App Service
+App Service
+
 - Web Apps
   - Container-based
   - Code-based (Oryx)
-- Static Web Apps
-  - Site content, Function, static content
-  - GitHub Actions
+
+Static Web Apps
+
+- Site content, Function, static content
+- GitHub Actions
 
 ::: notes
 
@@ -261,17 +287,21 @@ Talk about some of the things you saw in the demos
 
 ### Links
 
-- Deck
-  - [github.com/azuretechcommunity/talks][]
-- Links
-  - [github.com/microsoft/oryx][]
-  - [github.com/azure/static-web-apps-deploy][]
+Deck
+
+- [github.com/azuretechcommunity/talks][]
+
+Links
+
+- [github.com/microsoft/oryx][]
+- [github.com/azure/static-web-apps-deploy][]
 
 [azure-portal]: https://portal.azure.com/
 [azure-create-web-app]: https://portal.azure.com/#create/microsoft.webSite
 [azure-create-static-web-app]: https://portal.azure.com/#create/microsoft.staticapp
 [images-app_services]: media/app_services.png
 [images-docker]: media/docker.png
+[images-github]: media/github.png
 [images-oryx]: media/oryx.png
 [images-static_web_apps]: media/static_web_apps.png
 [images-static_web_apps_breakdown]: media/static_web_apps_breakdown.png
