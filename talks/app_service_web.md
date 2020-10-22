@@ -5,12 +5,6 @@ author: Presenter Name
 
 ## What is App Service❓ What are Web Apps❓
 
-::: notes
-
-App Service and Web Apps are used interchangably in this section
-
-:::
-
 ### App Service
 
 :::::::::::::: {.columns}
@@ -137,15 +131,9 @@ This is also a great way to lock your application to a specific older framework
 
 :::
 
-## That's cool, how about the new Azure Static Web Apps Apps❓
+## That's cool, how about the new Azure Static Web Apps❓
 
-::: notes
-
-Pivot from Web Apps (useful for server-side applications) to Static Web Apps (useful for front-end JS applications)
-
-:::
-
-### Azure Static Web Apps Apps
+### Azure Static Web Apps
 
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
@@ -251,9 +239,13 @@ Action specifies the location of the build artifacts, application root, and API
     1. Select the same resource group as you used for the previous demo.
     1. Give you static web app an easily memorized unique name.
     1. Select any region.
-    1. Sign in to GitHub using the same account that you use to generate your new repository.
+    1. Sign in to GitHub using the same account that you use to generate your new repository. Authorize permission to access your account and organization\[s\].
     1. Select the **Organization** and **Repository** list options that match where you generated your new repo.
     1. Select the **main** branch.
+    1. In the **Build Presets** list, select **Custom**.
+    1. In the **App location** box, enter **/**.
+    1. In the **Api location** box, enter **api**.
+    1. In the **App artifact location** box, enter **out**.
     1. Select **Review + create**.
 1. In the **Review + create** tab, select **Create** to deploy the new Web App.
 1. Wait for the deployment process to finish, then select **Go to resource**.
@@ -296,6 +288,12 @@ Links
 - [github.com/microsoft/oryx][]
 - [github.com/azure/static-web-apps-deploy][]
 
+::: notes
+
+The deck is open-source and attendees are welcome to view the deck to get images, links, and other content they may have missed
+
+:::
+
 [azure-portal]: https://portal.azure.com/
 [azure-create-web-app]: https://portal.azure.com/#create/microsoft.webSite
 [azure-create-static-web-app]: https://portal.azure.com/#create/microsoft.staticapp
@@ -310,9 +308,3 @@ Links
 [github.com/microsoft/oryx]: https://github.com/microsoft/oryx
 [github.com/msusdev/example-next-web-app]: https://github.com/msusdev/example-next-web-app
 [github.com/msusdev/example-next-web-app/generate]: https://github.com/msusdev/example-next-web-app/generate
-
-::: notes
-
-The deck is open-source and attendees are welcome to view the deck to get images, links, and other content they may have missed
-
-:::
