@@ -21,6 +21,6 @@ You can submit change requests, ideas and bugs using the [Issues][issues] tab he
 [pull_requests]: ../../pulls
 [pandoc-guidance]: https://pandoc.org/MANUAL.html#slide-shows
 [release-latest]: ../../releases/latest
-[talk-app_service_web-source]: lightning/app_service_web.md
+[talk-app_service_web-source]: talks/app_service_web.md
 [talk-app_service_web-video]: https://youtube.com/microsoftdevradio
 [talk-app_service_web-video-alt]: https://about:blank
