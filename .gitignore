@@ -6,6 +6,8 @@
 !.assets/
 .assets/*
 !.assets/*.pptx
+!.assets/*.theme
+.assets/~$*.pptx
 !talks/
 talks/*
 !talks/*.md
