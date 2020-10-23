@@ -15,7 +15,7 @@ jobs:
       - name: 'Checkout Code'
         uses: actions/checkout@v2
       - name: 'Run Pandoc Builds'
-        run: ls | grep '.md' | xargs basename -s '.md' | xargs -I % sh -c "pandoc %.md --standalone --slide-level=3 --reference-doc=../.assets/template.pptx --variable=monofont:'Consolas' --output %-v${{ github.run_number }}.pptx"
+        run: ls | grep '.md' | xargs basename -s '.md' | xargs -I % sh -c "pandoc %.md --standalone --slide-level=3 --reference-doc=../.assets/template.pptx --highlight-style=../.assets/code.theme --variable=monofont:'Consolas' --output %-v${{ github.run_number }}.pptx"
         working-directory: ./talks
       - name: 'Upload Presentation Artifacts'
         uses: actions/upload-artifact@v2

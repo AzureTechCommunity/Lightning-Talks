@@ -1,0 +1,33 @@
+name: 'Validate Presentation Build'
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  validate-markdown:
+    name: 'Validate Markdown'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Code'
+        uses: actions/checkout@v2
+      - name: 'Lint Markdown'
+        uses: nosborn/github-action-markdown-cli@v1.1.1
+        with:
+          config_file: '.assets/lint.config.json'
+          files: '**/*.md'
+  build-pptx:
+    name: 'Build PowerPoint Presentation'
+    runs-on: ubuntu-latest
+    container:
+      image: seesharprun/pandoc-build
+    steps:
+      - name: 'Checkout Code'
+        uses: actions/checkout@v2
+      - name: 'Run Pandoc Builds'
+        run: ls | grep '.md' | xargs basename -s '.md' | xargs -I % sh -c "pandoc %.md --standalone --slide-level=3 --reference-doc=../.assets/template.pptx --highlight-style=../.assets/code.theme --variable=monofont:'Consolas' --output %-draft.pptx"
+        working-directory: ./talks
+      - name: 'Upload Presentation Artifacts'
+        uses: actions/upload-artifact@v2
+        with:
+          name: presentations
+          path: ./talks/*.pptx
