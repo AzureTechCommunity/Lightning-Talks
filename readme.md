@@ -10,7 +10,7 @@ Each lightning talk is designed to take ~15 minutes to present and includes 1-2 
 | :--- | ---: | ---: | ---: |
 | Host your web apps with Azure App Service  | [app_service_web.md][talk-app_service_web-source] | [app_service_web.pptx][release-latest] | [YouTube][talk-app_service_web-video] |
 | The New Azure SDK for .NET | [azure_sdk_net.md][talk-azure_sdk_net-source] | [azure_sdk_net.pptx][release-latest] | [YouTube][talk-azure_sdk_net-video]
-| The New Azure SDK for JavaScript | [azure_sdk_net.md][talk-azure_sdk_js-source] | [azure_sdk_net.pptx][release-latest] | [YouTube][talk-azure_sdk_js-video]
+| The New Azure SDK for JavaScript | [azure_sdk_js.md][talk-azure_sdk_js-source] | [azure_sdk_js.pptx][release-latest] | [YouTube][talk-azure_sdk_js-video]
 
 ## Contributing
 
