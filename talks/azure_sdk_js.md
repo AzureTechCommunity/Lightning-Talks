@@ -183,7 +183,17 @@ var azure = require('azure-storage');
 const connectionString = "UseDevelopmentStorage=true";
 
 var client = azure.createBlobService(connectionString);
+```
 
+::: notes
+
+**NPM Package**: [azure-storage][npmjs.com/azure-storage]
+
+:::
+
+### Old JavaScript SDK Example (cont.)
+
+```js
 client.createContainerIfNotExists("files", {}, (error, result) => {
   
   // next steps
@@ -192,8 +202,6 @@ client.createContainerIfNotExists("files", {}, (error, result) => {
 ```
 
 ::: notes
-
-**NPM Package**: [azure-storage][npmjs.com/azure-storage]
 
 To get a client, you need to use the **azure** constant and the **createBlobService** method
 
@@ -208,12 +216,21 @@ API calls inconsistently support synchronous and asynchronous operations
 ```js
 const { BlobServiceClient } = require("@azure/storage-blob");
 
-async function run() {
+const connectionString = "UseDevelopmentStorage=true";
 
-  const connectionString = "UseDevelopmentStorage=true";
-  
-  const client = BlobServiceClient.fromConnectionString(connectionString);
-  
+const client = BlobServiceClient.fromConnectionString(connectionString);
+```
+
+::: notes
+
+**NPM Package**: [@azure/storage-blob][npmjs.com/azure/storage-blob]
+
+:::
+
+### New JavaScript SDK Example (cont.)
+
+```js
+async function run() {
   const container = client.getContainerClient("files");
 
   await container.createIfNotExists();
@@ -227,8 +244,6 @@ run();
 
 ::: notes
 
-**NPM Package**: [@azure/storage-blob][npmjs.com/azure/storage-blob]
-
 The new SDK supports both synchronous and asynchronous API calls consistently
 
 The new SDK uses the **promises** API for JavaScript
@@ -241,7 +256,7 @@ The SDK also renames the classes to be consistent across languages while respect
 
 ::: notes
 
-> **Prerequisites**: *Ensure you have Node.js version **8.0.0** or higher installed.*
+> **Prerequisites**: *Ensure you have **Node.js v8.0.0** or higher installed.*
 
 1. Open a new instance of **Visual Studio Code** in an empty folder.
 1. If you have not already, install the [Azure Storage][visualstudio.com/ms-azuretools.vscode-azurestorage] extension for Visual Studio Code.

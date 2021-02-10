@@ -186,15 +186,23 @@ string connectionString = "UseDevelopmentStorage=true";
 CloudStorageAccount account = CloudStorageAccount.Parse(connectionString);
 
 CloudBlobClient client = account.CreateCloudBlobClient();
+```
 
+::: notes
+
+**NuGet Package**: [Microsoft.Azure.Storage.Blob][nuget.org/microsoft.azure.storage.blob]
+
+:::
+
+### Old .NET SDK Example (cont.)
+
+```csharp
 CloudBlobContainer container = client.GetContainerReference("files");
 
 container.CreateIfNotExists();
 ```
 
 ::: notes
-
-**NuGet Package**: [Microsoft.Azure.Storage.Blob][nuget.org/microsoft.azure.storage.blob]
 
 To get a client, you need to create **CloudStorageAccount** and **CloudBlobClient** instances
 
@@ -210,15 +218,23 @@ using Azure.Storage.Blobs;
 string connectionString = "UseDevelopmentStorage=true";
 
 BlobServiceClient client = new BlobServiceClient(connectionString);
+```
 
+::: notes
+
+**NuGet Package**: [Azure.Storage.Blobs][nuget.org/azure.storage.blobs]
+
+:::
+
+### New .NET SDK Example (cont.)
+
+```csharp
 BlobContainerClient container = client.GetBlobContainerClient("files");
 
 await container.CreateIfNotExistsAsync();
 ```
 
 ::: notes
-
-**NuGet Package**: [Azure.Storage.Blobs][nuget.org/azure.storage.blobs]
 
 The new SDK supports both synchronous and asynchronous API calls consistently
 
@@ -230,7 +246,7 @@ The SDK also renames the classes to be consistent across languages while respect
 
 ::: notes
 
-> **Prerequisites**: *Ensure you have .NET version **8.0.0** or higher installed.*
+> **Prerequisites**: *Ensure you have **.NET 5** or higher installed.*
 
 1. Open a new instance of **Visual Studio Code** in an empty folder.
 1. If you have not already, install the [Azure Storage][visualstudio.com/ms-azuretools.vscode-azurestorage] extension for Visual Studio Code.
