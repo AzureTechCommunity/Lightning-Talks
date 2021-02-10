@@ -75,8 +75,8 @@ Having a core framework in place makes it easier to add support for new language
 
 - [azure/azure-sdk][github.com/azure/azure-sdk]
   - Documentation on guidelines and policies
-- **[azure/azure-sdk-for-js][github.com/azure/azure-sdk-for-js]**
-  - **SDK for JavaScript**
+- **➡️ [azure/azure-sdk-for-js][github.com/azure/azure-sdk-for-js]**
+  - **➡️ SDK for JavaScript**
 - [azure/azure-sdk-for-net][github.com/azure/azure-sdk-for-net]
   - SDK for .NET
 - [azure/azure-sdk-for-python][github.com/azure/azure-sdk-for-python]
@@ -231,6 +231,7 @@ const client = BlobServiceClient.fromConnectionString(connectionString);
 
 ```js
 async function run() {
+
   const container = client.getContainerClient("files");
 
   await container.createIfNotExists();
