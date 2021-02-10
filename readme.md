@@ -8,7 +8,9 @@ Each lightning talk is designed to take ~15 minutes to present and includes 1-2 
 
 | Talk | Markdown Source | PowerPoint Presentation | Train the Trainer Video |
 | :--- | ---: | ---: | ---: |
-| Host your web apps with Azure App Service  | [app_service_web.md][talk-app_service_web-source] | [app_service_web.pptx][release-latest] | [YouTube][talk-app_service_web-video]/[Alt][talk-app_service_web-video-alt] |
+| Host your web apps with Azure App Service  | [app_service_web.md][talk-app_service_web-source] | [app_service_web.pptx][release-latest] | [YouTube][talk-app_service_web-video] |
+| The New Azure SDK for .NET | [azure_sdk_net.md][talk-azure_sdk_net-source] | [azure_sdk_net.pptx][release-latest] | [YouTube][talk-azure_sdk_net-video]
+| The New Azure SDK for JavaScript | [azure_sdk_js.md][talk-azure_sdk_js-source] | [azure_sdk_js.pptx][release-latest] | [YouTube][talk-azure_sdk_js-video]
 
 ## Contributing
 
@@ -23,4 +25,7 @@ You can submit change requests, ideas and bugs using the [Issues][issues] tab he
 [release-latest]: ../../releases/latest
 [talk-app_service_web-source]: talks/app_service_web.md
 [talk-app_service_web-video]: https://youtube.com/microsoftdevradio
-[talk-app_service_web-video-alt]: https://about:blank
+[talk-azure_sdk_js-source]: talks/azure_sdk_js.md
+[talk-azure_sdk_js-video]: https://youtube.com/microsoftdevradio
+[talk-azure_sdk_net-source]: talks/azure_sdk_net.md
+[talk-azure_sdk_net-video]: https://youtube.com/microsoftdevradio
