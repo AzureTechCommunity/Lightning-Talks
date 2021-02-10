@@ -94,7 +94,7 @@ Having a core framework in place makes it easier to add support for new language
 
 ::: notes
 
-The [github.com/azure/azure-sdk][] repository contains releases, documentation, and guidelines for all of the other repositories
+The [github.com/azure/azure-sdk][github.com/azure/azure-sdk] repository contains releases, documentation, and guidelines for all of the other repositories
 
 The **.NET**, JavaScript, Python, and Java repositories contain source code, samples, and documentation relevant to that language
 

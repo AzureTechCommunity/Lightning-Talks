@@ -94,7 +94,7 @@ Having a core framework in place makes it easier to add support for new language
 
 ::: notes
 
-The [github.com/azure/azure-sdk][] repository contains releases, documentation, and guidelines for all of the other repositories
+The [github.com/azure/azure-sdk][github.com/azure/azure-sdk] repository contains releases, documentation, and guidelines for all of the other repositories
 
 The .NET, **JavaScript**, Python, and Java repositories contain source code, samples, and documentation relevant to that language
 
@@ -223,7 +223,7 @@ const client = BlobServiceClient.fromConnectionString(connectionString);
 
 ::: notes
 
-**NPM Package**: [@azure/storage-blob][npmjs.com/azure/storage-blob]
+**NPM Package**: [\@azure/storage-blob][npmjs.com/azure/storage-blob]
 
 :::
 
@@ -269,7 +269,7 @@ The SDK also renames the classes to be consistent across languages while respect
         npm init --force
         ```
 
-    1. Install the **[@azure/storage-blob][npmjs.com/@azure/storage-blob]** package from NPM:
+    1. Install the **[@azure/storage-blob][npmjs.com/azure/storage-blob]** package from NPM:
 
         ```sh
         npm install @azure/storage-blob --save
