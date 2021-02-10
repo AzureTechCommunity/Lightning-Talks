@@ -73,13 +73,16 @@ Having a core framework in place makes it easier to add support for new language
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-| Repository | Description |
-| --- | --- |
-| [azure/azure-sdk][github.com/azure/azure-sdk] | Documentation on guidelines and policies |
-| **[azure/azure-sdk-for-net][github.com/azure/azure-sdk-for-net]** | **SDK for .NET** |
-| [azure/azure-sdk-for-js][github.com/azure/azure-sdk-for-js] | SDK for JavaScript |
-| [azure/azure-sdk-for-python][github.com/azure/azure-sdk-for-python] | SDK for Python |
-| [azure/azure-sdk-for-java][github.com/azure/azure-sdk-for-java] | SDK for Java |
+- [azure/azure-sdk][github.com/azure/azure-sdk]
+  - Documentation on guidelines and policies
+- **[azure/azure-sdk-for-net][github.com/azure/azure-sdk-for-net]**
+  - **SDK for .NET**
+- [azure/azure-sdk-for-js][github.com/azure/azure-sdk-for-js]
+  - SDK for JavaScript
+- [azure/azure-sdk-for-python][github.com/azure/azure-sdk-for-python]
+  - SDK for Python
+- [azure/azure-sdk-for-java][github.com/azure/azure-sdk-for-java]
+  - SDK for Java
 
 :::
 ::: {.column width="50%"}
@@ -104,13 +107,16 @@ Each language repository contains SDK source code to access multiple Azure servi
 :::::::::::::: {.columns}
 ::: {.column width="50%"}
 
-| Repository | Description |
-| --- | --- |
-| [github.com/azure/azure-sdk-for-ios][github.com/azure/azure-sdk-for-ios] | Client SDK for iOS Apps |
-| [github.com/azure/azure-sdk-for-android][github.com/azure/azure-sdk-for-android] | Client SDK for Android Apps |
-| [github.com/azure/azure-sdk-for-go][github.com/azure/azure-sdk-for-go] | SDK for Go |
-| [github.com/azure/azure-sdk-for-cpp][github.com/azure/azure-sdk-for-cpp] | SDK for C++ |
-| [github.com/azure/azure-sdk-for-c][github.com/azure/azure-sdk-for-c] | SDK for Embedded C |
+- [github.com/azure/azure-sdk-for-ios][github.com/azure/azure-sdk-for-ios]
+  - Client SDK for iOS Apps
+- [github.com/azure/azure-sdk-for-android][github.com/azure/azure-sdk-for-android]
+  - Client SDK for Android Apps
+- [github.com/azure/azure-sdk-for-go][github.com/azure/azure-sdk-for-go]
+  - SDK for Go
+- [github.com/azure/azure-sdk-for-cpp][github.com/azure/azure-sdk-for-cpp]
+  - SDK for C++
+- [github.com/azure/azure-sdk-for-c][github.com/azure/azure-sdk-for-c]
+  - SDK for Embedded C
 
 :::
 ::: {.column width="50%"}
@@ -148,13 +154,16 @@ Each language supports a growing amount of Azure services
 
 **Developer productivity** is the core objective. The overall guidelines and each individual SDK is built around these paradigms:
 
-| | |
-| --- | --- |
-| Idiomatic | Each SDK feels **natural and conventional** to the target language |
-| Consistent | SDKs are **consistent** across various languages and Azure services |
-| Approachable | SDKs are **well documented** with the goal of getting developers started quickly |
-| Diagnosable | SDKs feature **logging** and **discoverability** as core-level features |
-| Dependable | SDKs are **stable** with a focus on compatibility for seamless upgrades |
+- **Idiomatic**
+  - Each SDK feels **natural and conventional** to the target language
+- **Consistent**
+  - SDKs are **consistent** across various languages and Azure services
+- **Approachable**
+  - SDKs are **well documented** with the goal of getting developers started quickly
+- **Diagnosable**
+  - SDKs feature **logging** and **discoverability** as core-level features
+- **Dependable**
+  - SDKs are **stable** with a focus on compatibility for seamless upgrades
 
 ::: notes
 
@@ -167,8 +176,6 @@ Many existing SDKs required some rework to implement all five paradigms.
 :::
 
 ### Old .NET SDK Example
-
-> **NuGet Package**: [Microsoft.Azure.Storage.Blob][nuget.org/microsoft.azure.storage.blob]
 
 ```csharp
 using Microsoft.Azure.Storage;
@@ -187,6 +194,8 @@ container.CreateIfNotExists();
 
 ::: notes
 
+**NuGet Package**: [Microsoft.Azure.Storage.Blob][nuget.org/microsoft.azure.storage.blob]
+
 To get a client, you need to create **CloudStorageAccount** and **CloudBlobClient** instances
 
 API calls inconsistently support synchronous and asynchronous operations
@@ -194,8 +203,6 @@ API calls inconsistently support synchronous and asynchronous operations
 :::
 
 ### New .NET SDK Example
-
-> **NuGet Package**: [Azure.Storage.Blobs][nuget.org/azure.storage.blobs]
 
 ```csharp
 using Azure.Storage.Blobs;
@@ -210,6 +217,8 @@ await container.CreateIfNotExistsAsync();
 ```
 
 ::: notes
+
+**NuGet Package**: [Azure.Storage.Blobs][nuget.org/azure.storage.blobs]
 
 The new SDK supports both synchronous and asynchronous API calls consistently
 
