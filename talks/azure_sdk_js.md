@@ -269,7 +269,7 @@ The SDK also renames the classes to be consistent across languages while respect
         npm init --force
         ```
 
-    1. Install the **[@azure/storage-blob][npmjs.com/azure/storage-blob]** package from NPM:
+    1. Install the **[\@azure/storage-blob][npmjs.com/azure/storage-blob]** package from NPM:
 
         ```sh
         npm install @azure/storage-blob --save
